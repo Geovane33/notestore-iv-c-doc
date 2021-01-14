@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--alerta personalizado js-css-->
+    <!--  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script> -->
+
+    <!--carrinho css-js-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/clientes/pedido.css">
+    <script src="/clientes/pedido.js"></script>
+    
+
+</head>
+
+<body>
+    <nav class="navbar sticky-top bg-black">
+        <a class="container" href="/index"><img class="m-auto" src="../logo/notestore.png" width="250"></a>
+    </nav>
+    <div>
+        <div class="container d-sm-flex d-lg-block justify-content-sm-center">
+            <div class="row d-inline-block d-md-flex container-info">
+                <div class="col-lg-4"><strong>Meu Carrinho</strong><i class="fa fa-shopping-cart"></i>
+                    <div id="listaCarrinho"></div>
+                </div>
+                <div class="col-lg-4 offset-lg-4"><strong>Resumo do pedido</strong>
+                    <div class="row" id="resumoCompra">
+                        <!-- <div class="col" style="background: rgba(222,222,222,0.58);border-radius: 5px;"><span>Pedido: </span><span
+                            class="d-xl-flex align-items-xl-start">Data do pedido: <strong> 13/11/2020 18:00</strong></span><span
+                            class="d-xl-flex align-items-xl-start">Valor total: <strong> 1</strong></span>
+                        <hr /><span class="d-xl-flex align-items-xl-start"><strong>Endereço de entrega</strong></span><span
+                            class="d-xl-flex align-items-xl-start">Casa</span><span class="d-xl-flex align-items-xl-start">Rua José Galdino,
+                            309 - Antiga Rua dos Trabalhadores<br /></span>
+                        <span class="d-xl-flex align-items-xl-start">CEP: 06950-000<br /></span>
+                        <hr /><span class="d-xl-flex align-items-xl-start"><strong>Forma de pagamento</strong></span><span
+                            class="d-xl-flex align-items-xl-start">Cartão de crédito: 3.999,00<br />(Parcelado em 3x de
+                            R$50,00)<br /></span>
+                        <hr /><span class="d-xl-flex align-items-xl-start"><strong>Total da compra</strong></span><span
+                            class="d-xl-flex align-items-xl-start">Subtotal de produtos: 3.999,00<br /></span><span
+                            class="d-xl-flex align-items-xl-start">Frete: R$ 16,00<br /></span>
+                        <span class="d-xl-flex align-items-xl-start">Descontos: R$ 0,00<br /></span>
+                        <hr /><span class="d-xl-flex align-items-xl-start"><strong>Valor total: R$ 3.999,00</strong></span></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

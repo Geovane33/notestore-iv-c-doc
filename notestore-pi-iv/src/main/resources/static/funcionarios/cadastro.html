@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+  
+        <!--jquery js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
+    
+        <!--bootstrap css-js -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+        <!--alerta personalizado js-css-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+          <!--cadastro css-js-->
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="cadastro.css">
+    <script type="text/javascript" src="cadastro.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <nav class="navbar sticky-top navbar-light navbar-expand-md bg-black">
+            <div class="container"><a href="/"><img src="/logo/notestore.png" style="width: 256px;" /> </a><button data-toggle="collapse" data-target="#navcol-2" class="navbar-toggler bg-white"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                    id="navcol-2">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link active" href="/produtos/estoque" style="color: rgba(255,255,255,0.9);"><strong>Estoque</strong></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/produtos/cadastro.html" style="color: rgb(255,255,255);"><strong>Novo produto</strong></a></li>
+                        <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link d-none" href="#">Dropdown </a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                        </li>
+                    </ul><span class="navbar-text actions"><a class="btn action-button bg-white" role="button" href="/notestore/login.html">Login</a><a class="login ml-2" href="/logout" style="color: rgba(255,255,255,0.9);"><strong>Logout</strong></a></span></div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col">
+                <div class="text-center">
+                    <h4 class="mt-4"><strong>NOVO FUNCIONÁRIO</strong></h4>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <form id="cadastro" action="/funcionarios" method="post"><span class="m-auto">Dados com * são obrigatórios<br></span><strong>Dados Pessoais</strong>
+                <input type="hidden" value="0" name="id" id="id">
+                <div class="form-row">
+                    <div class="col-md-4"><label class="m-auto" for="nome">*Nome<br></label><input class="form-control" type="text" id="nome" placeholder="Digite seu nome" minlength="5" required="" name="nome"></div>
+                    <div class="col-md-4"><label class="m-auto" for="sobrenome">Sobrenome<br></label><input class="form-control" type="text" id="sobrenome" placeholder="Digite seu sobrenome" name="sobrenome"></div>
+                    <div class="col-md-4"><label class="m-auto" for="cpf">*CPF<br></label><input class="form-control" type="text" id="cpf" placeholder="Digite seu CPF" name="cpf" required="" minlength="11" maxlength="11"></div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4"><label class="m-auto" for="dataNascimento">*Data de Nascimento<br></label><input class="form-control" id="dataNascimento" type="date" min="1900-01-01" max="2006-01-01" name="dataNascimento" required=""></div>
+                    <div class="col-md-4"><label class="m-auto" for="telefone">Telefone<br></label><input  class="form-control" type="text" id="telefone" placeholder="Digite seu telefone" name="telefone" minlength="8" maxlength="16"></div>
+                    <div class="col-md-4"><label class="m-auto" for="sexo">*Sexo<br></label><select class="form-control" id="sexo" name="sexo" required=""><option value="Feminino" selected="">Feminino</option><option value="Masculino">Masculino</option><option value="Outro">Outro</option></select></div>
+                </div><strong>Endereço</strong>
+                <div class="form-row">
+                    <div class="col-md-4"><label class="m-auto" for="cep">*CEP<br></label><input class="form-control" type="text" id="cep" placeholder="00000-000" name="cep" required="" minlength="9" maxlength="9"></div>
+                    <div class="col-md-4"><label class="m-auto" for="rua">*Rua/AV.<br></label><input class="form-control" type="text" id="rua" placeholder="Nome da rua ou avenida" name="rua" required="" minlength="5"></div>
+                    <div class="col"><label class="m-auto" for="numero">*Numero<br></label><input class="form-control" type="text" id="numero" name="numero" required=""></div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4"><label class="m-auto" for="bairro">*Bairro<br></label><input class="form-control" type="text" id="bairro" placeholder="Digite seu bairro" name="bairro" required="" minlength="3"></div>
+                    <div class="col-md-4"><label class="m-auto" for="estado">*Estado<br></label><input class="form-control" type="text" id="estado" placeholder="Nome da rua ou avenida" name="estado" required="" minlength="2"></div>
+                    <div class="col"><label class="m-auto" for="cidade">*Cidade<br></label><input class="form-control" type="text" id="cidade" placeholder="Tipo de endereço" name="cidade" required="" minlength="3"></div>
+                </div><strong>Perfil do funcionário</strong>
+                <div class="form-row">
+                    <div class="col-md-4"><label class="m-auto" for="perfil">*Função<br></label><select class="form-control" id="perfil" name="perfil"><optgroup label="Função do funcionário"><option value="Estoquista" selected="">Estoquista</option><option value="Gerente">Gerente</option><option value="Administrador">Administrador</option></optgroup></select></div>
+                    <div
+                        class="col-md-4"><label class="m-auto" id="emailLabel" for="email">*Email<br></label><input class="form-control" type="email" id="email" placeholder="Digite seu email" name="email" required="" minlength="7"></div>
+                <div class="col-md-4"><label class="m-auto" for="senha">*Senha<br></label><input class="form-control" type="password" id="senha" name="senha" placeholder="Senha para acesso" required="" minlength="6"></div>
+        </div>
+        <div class="form-row justify-content-center">
+            <div class="col-md-4"><button class="btn btn-block border rounded border-dark shadow btn-black mt-3" type="submit"><strong>PROSSEGUIR</strong></button></div>
+        </div>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

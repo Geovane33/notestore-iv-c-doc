@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"> -->
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="/clientes/selecione-endereco.js"></script>
+</head>
+
+<body style="opacity: 1;">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: rgb(0,0,0);">
+        <div class="container"><a href="/index"><img src="../logo/notestore.png" style="width: 242px;"></a><button data-toggle="collapse"
+                class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
+            </div><i class="fa fa-shopping-cart" style="font-size: 33px;color: rgb(255,255,255);"></i>
+        </div>
+    </nav>
+    <div style="margin-top: 100px;">
+        <div class="col text-center"><img id="imgEtapas" src="../imgs/etapa-verificacao.png"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9">
+                    <h3 style="color: rgb(0,0,0);">Endereços</h3>
+                    <div id="enderecos"></div>
+                    <!-- <div class="row">
+                        <div class="col-6">
+                            <div style="box-shadow: 0 0 8px 0px;">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Principal</h4>
+                                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                                            justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                            porta gravida at eget metus.</p>
+                                        <hr><a class="card-link text-black-50" style="cursor: pointer"><i
+                                                class="fa fa-edit"></i>Selecionar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div style="box-shadow: 0px 0px 8px 0px;">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Principal</h4>
+                                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                                            justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                            porta gravida at eget metus.</p>
+                                        <hr><a class="card-link text-black-50" href="#"><i
+                                                class="fa fa-edit"></i>Selecionar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="row row-cols-5 justify-content-center">
+                        <div class="col offset-1"><button class="btn btn-block shadow btn-black mt-3" onclick="adicionarEndereco()" type="button"
+                                style="margin-top: 38px; font-size: 14px;">ADICIONAR MAIS</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

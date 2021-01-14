@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html LANG="pt-br">
+
+<head>
+    <title>NOTESTORE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!--index js-css-->
+    <Link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="index.js"></script>
+
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: rgb(0,0,0);">
+    <div class="container"><img src="../logo/notestore.png" style="width: 242px;"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse"
+             id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item"></li>
+                <li class="nav-item"></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fa fa-heart"></i>&nbsp;Favoritos<br></a></li>
+                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#" id="aNome">Entrar</a>
+                    <div class="dropdown-menu"><a class="dropdown-item a-black" id="aLogin" href="/login">Login</a><a class="dropdown-item a-black" id="aPedidos" href="/clientes/pedidos">Meus pedidos</a><a class="dropdown-item a-black" id="aEnderecos" href="/clientes/enderecos-visualizar">Endereços</a> <a class="dropdown-item a-black" id="aConta" href="/clientes/enderecos-visualizar">Minha conta</a><a class="dropdown-item a-black" id="aLogout" href="#" onclick="logout()">Logout</a> </div>
+                </li>
+            </ul>
+        </div><a href="/clientes/carrinho"><i class="fa fa-shopping-cart" style="font-size: 33px;color: rgb(255,255,255);"></i></a></div>
+</nav>
+                    <form id="formPesquisar" action="../produtos" method="GET" class="form-inline">
+                        <label class="sr-only" for="pesquisar">Pesquisar</label>
+                        <input type="text" class="form-control mt-4 mr-sm-2" id="pesquisar" name="palavrasChave" placeholder="Pesquisar">
+                        <button class="mt-2 btn btn-dark btn-black-m texto" type="submit">OK</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    <div id="categoriaGamer" class="page-titulo texto" style="display: none;">GAMER</div>
+    <div id="categoria1"></div>
+    <div id="categoriaProf" class="page-titulo texto"  style="display: none;">PROFISSIONAL</div>
+    <div id="categoria2"></div>
+    <div id="categoriaDia" class="page-titulo texto"  style="display: none;">DIA A DIA</div>
+    <div id="categoria3"></div>
+</body>
+
+</html>

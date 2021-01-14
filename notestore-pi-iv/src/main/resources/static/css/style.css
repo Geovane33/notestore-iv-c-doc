@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.logo {
+    width: 250px;
+}
+
+.page-titulo {
+    font-size: 151%;
+    margin-top: 1%;
+    right: auto;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.texto {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn-black {
+  color: #fff;
+  background-color: #000000;
+  border-color: #363636 !important;
+}
+
+.btn-black:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #303030 !important;
+}
+
+.bg-black {
+  background-color: #000000!important;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.img-pointer {
+    cursor: pointer;
+}
+
+a:-webkit-any-link {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.swal2-confirm {
+    border-left-color: rgb(0 0 0) !important;
+    border-right-color: rgb(6 6 6) !important;
+    background-color: #000000 !important;
+}
+
+.item-produto {
+    margin-bottom: 0px;
+    width: 100px;
+    height: 64px;
+}
+
+.carousel-item {
+    text-align: -webkit-center;
+}
+
+.dados-produto {
+    color: black;
+    font-size: 13px;
+    background-color: #c1c1c161;
+}
+
+.card-produto {
+    color: black;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.a-black{
+color: black !important;;
+}
+
+.icon{
+  width: 15px;
+}
+.d-contents{
+    display: contents;
+}
+

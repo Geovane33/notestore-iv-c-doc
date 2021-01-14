@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+    <!--icones -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!--consultar js-css-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="consultar.css">
+    <script type="text/javascript" src="consultar.js"></script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-light navbar-expand-md bg-black">
+        <div class="container"><a href="/"><img src="/logo/notestore.png" style="width: 256px;" /> </a><button data-toggle="collapse" data-target="#navcol-2" class="navbar-toggler bg-white"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-2">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link active" href="/produtos/estoque" style="color: rgba(255,255,255,0.9);"><strong>Estoque</strong></a></li>
+                    <li class="nav-item"><a class="nav-link" href="/produtos/cadastro.html" style="color: rgb(255,255,255);"><strong>Novo produto</strong></a></li>
+                    <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link d-none" href="#">Dropdown </a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                    </li>
+                </ul><span class="navbar-text actions"><a class="btn action-button bg-white" role="button" href="/notestore/login">Login</a><a class="login ml-2" href="/notestore/logout" style="color: rgba(255,255,255,0.9);"><strong>Logout</strong></a></span></div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col">
+            <div class="text-center">
+                <h4 class="mt-4"><strong>FUNCIONÁRIOS</strong></h4>
+            </div>
+        </div>
+    </div>
+        <div class="barra-acoes">
+            <form id="formPesquisar" action="/funcionarios" method="GET">
+                <a href="cadastro.html"><button class="btn btn-black btn-dark texto" type="button">NOVO FUNCIONARIO</button></a>
+                <input type="text" placeholder="Email do funcionário" name="email">
+                <input  type="text" placeholder="CPF do funcionário" name="cpf">
+                <button class="btn btn-black btn-dark texto" type="submit">PROSSEGUIR</button>
+            </form>
+        </div>
+
+    <!-- <div class="row">
+        <div class="col mt-1">
+            <div class="text-center">
+                <form id="formPesquisar" action="/funcionarios" method="GET">
+                <a href="cadastro.html"><button class="btn border rounded border-dark shadow btn-black mr-4" type="button" ><strong>NOVO FUNCIONARIO</strong></button></a><input type="text" name="cpf" class="mr-4" placeholder="CPF do funcionário" style="font-size: 10px;"><input type="text"
+                   name="email" placeholder="Email do funcionário"><button class="btn  border rounded border-dark shadow btn-black ml-4" type="submit" ><strong>PROSSEGUIR</strong></button>
+                </form>
+                </div>
+        </div>
+    </div> -->
+    <div class="table table-striped table-hover table-sm table-borderless centered">
+        <table class="table table-striped">
+            <thead class="bg-black">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Função</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody id="lista-func">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

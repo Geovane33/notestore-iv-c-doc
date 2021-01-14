@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='UTF-8' />
+    <title>NOTESTORE</title>
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!--cadastro js-css-->
+    <script type="text/javascript" src="cadastro.js"></script>
+    <Link rel="stylesheet" href="../css/style.css" />
+    <Link rel="stylesheet" href="cadastro.css" />
+
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body class="">
+    <nav class="navbar sticky-top bg-black">
+        <a class="container" href="/"><img class="m-auto logo" src="../logo/notestore.png"></a>
+    </nav>
+    <div class="titulo-pagina">
+        <div>ATUALIZAR PRODUTO <a href="estoque.html">X</a> </div>
+    </div>
+    <div class="container-fluid h-100">
+        <div class="row form-cadastro justify-content-center">
+            <div class="col-3 align-self-center area-form">
+                <form id="cadastro" action="../../produtos" enctype="multipart/form-data" method="POST">
+                    <div hidden class="form-group">
+                        <input type="hidden" id="id" name="id" value="0" class="form-control bg-dark btn-outline-dark text-body text-body">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Nome do produto</label>
+                        <input required disabled type="text" id="nome" name="nome" class="form-control bg-dark btn-outline-dark text-body text-body">
+                    </div>
+                    <div class="form-group">
+                        <label for="marca">Marca do produto</label>
+                        <input required disabled type="text" name="marca" class="form-control bg-dark btn-outline-dark text-body" id="marca">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantidade">Quantidade</label>
+                        <input required type="number" class="form-control bg-light btn-outline-dark text-body" id="quantidade" name="quantidade">
+                    </div>
+
+                    <div class="area-texto">
+                        <label for="palavrasChaves">Palavras chaves</label>
+                        <textarea required disabled class="form-control bg-dark btn-outline-dark text-body area-texto-produto" id="palavrasChaves" name="palavrasChaves"></textarea>
+                        <label for="descricao">Descrição</label>
+                        <textarea required disabled class="form-control bg-dark btn-outline-dark text-body area-texto-produto" id="descricao" name="descricao"></textarea>
+                    </div>
+                         <div class="row">
+                        <div class="col-md-6">
+                            <button type="reset" class="btn btn-dark btn-black-m btn-block btn-m2 texto">LIMPAR</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-dark btn-black-m btn-block btn-m2 texto" id="acao" name="acao" value="adicionar">SALVAR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

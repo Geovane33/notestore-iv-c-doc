@@ -1,0 +1,38 @@
+input {
+  font-size: 12px;
+}
+
+.text-center {
+  background: #e7e5e5;
+}
+
+.btn{
+font-size: 11px;
+}
+
+
+th{
+color: white;
+}
+
+.table-responsive{
+width: 461px;
+}
+
+.centered {
+  padding: 0px !important;
+  text-align: center;
+  top: 13px;
+  position: relative;
+  width: 60% !important;
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.barra-acoes {
+  font-size: 151%;
+  margin-top: 1%;
+  right: auto;
+  background-color: gainsboro;
+  text-align: center;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
+        integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww=="
+        crossorigin="anonymous"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="/clientes/cadatro-cartao.js"></script>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-dark navbar-expand sticky-top bg-dark d-xl-flex justify-content-xl-center bg-black">
+            <div class="container"><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle
+                        navigation</span><span class="navbar-toggler-icon"></span></button><a href="/index"><img src="../logo/notestore.png" style="width: 242px;"></a></div>
+        </nav>
+        <div class="col text-center"><img src="../imgs/etapa-pagamento.png"></div>
+        <div class="container" style="width: 982px;">
+            <form id="cadCartao" action="/pedido/verificar" method="GET">
+                <div class="form-row text-center">
+                    <div class="col"><span class="m-auto">Dados com * são obrigatórios<br></span><strong>Pague com
+                            cartão</strong></div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4"><label class="m-auto"  for="numCartao">*Numero do cartão<br></label><input
+                            class="form-control" type="text" id="numCartao" required name="numCartao"></div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4"><label class="m-auto" required for="nomeTitular" style="font-size: 14px;">*Nome do
+                            titular (como está gravado no Cartão)<br></label><input class="form-control" required type="text"
+                            id="nomeTitular" name="nomeTitular"></div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4"><label class="m-auto" required for="dataValidade">*Data de validade<br></label><input
+                            class="form-control" id="dataValidade" type="month" min="1900-01-01" max="2006-01-01"
+                            name="dataValidade" required=""></div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4"><label class="m-auto"  for="codCartao">*Codigo de segurança<br></label><input
+                            class="form-control" type="text" required id="codCartao" name="codCartao"></div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4"><label class="m-auto" for="qtdParcelas">*Quantidade de
+                            parcelas<br></label><input class="form-control" type="text" required id="qtdParcelas"
+                            name="qtdParcelas"></div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4"><button class="btn btn-block border rounded border-dark shadow btn-black mt-3"
+                             type="submit"><strong>PROSSEGUIR</strong></button></div>
+                </div>
+            </form>
+            <section></section>
+        </div>
+    </div>
+</body>
+
+</html>

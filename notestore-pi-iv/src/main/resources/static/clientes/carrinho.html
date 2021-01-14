@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--alerta personalizado js-css-->
+    <!--  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script> -->
+
+    <!--carrinho css-js-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/clientes/carrinho.css">
+    <script src="/clientes/carrinho.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar sticky-top bg-black">
+        <a class="container" href="/index"><img class="m-auto" src="../logo/notestore.png" width="250"></a>
+    </nav>
+    <div>
+        <div class="container d-sm-flex d-lg-block justify-content-sm-center">
+            <div class="row d-inline-block d-md-flex container-info">
+                <div class="col-lg-4"><strong>Meu Carrinho</strong><i class="fa fa-shopping-cart"></i>
+                    <div id="listaCarrinho"></div>
+                </div>
+                <div class="col-lg-4 offset-lg-4"><strong>Resumo da compra</strong>
+                    <div class="row" id="resumoCompra">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

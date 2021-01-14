@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>NOTESTORE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!--detalhes css-js-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="detalhes.css">
+    <script src="detalhes.js"></script>
+
+    <link rel="icon" href="../favicon.ico">
+</head>
+
+<body>
+    <nav class="navbar sticky-top bg-black">
+        <a class="container" href="/"><img class="m-auto logo" src="../logo/notestore.png"></a>
+    </nav>
+    <div class="">
+        <section class="py-2">
+            <div class="container">
+                <div class="row flex-column flex-lg-row">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="carousel slide" id="carousel-ecommerce-01" data-ride="carousel">
+                            <div class="carousel-inner" id="imagens">
+                            </div>
+                            <div><a class="carousel-control-prev justify-content-start" href="#carousel-ecommerce-01"
+                                    role="button" data-slide="prev"><img src="../icons/chevron-left.svg"
+                                        aria-hidden="true" alt=""><span class="sr-only">Anterior</span></a><a
+                                    class="carousel-control-next justify-content-end" href="#carousel-ecommerce-01"
+                                    role="button" data-slide="next"><img src="../icons/chevron-right.svg"
+                                        aria-hidden="true" alt=""><span class="sr-only">Próxima</span></a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 border">
+                        <button class="btn fav btn-dark"><img class="img-fluid" src="../icons/icon-fav.png"
+                                alt="Favoritar"></button>
+                        <h2 class="mt-3 mb-4" id="nome"></h2>
+                        <p class="mt-3 mb-4" id="descricao"></p>
+                        <p class="mt-3 mb-4" id="marca"> </p>
+                        <div class="d-flex align-items-center my-4">
+
+                            <p class="m-0" id="preco">R$</p>
+                            <label class="sr-only" id="qtdProd" for="input1-ecommerce-01">Quantidade</label>
+                            <span class="bmd-form-group"><input style="visibility: hidden" class="form-control w-25 mx-3" id="input1-ecommerce-01"
+                                    type="number" placeholder="1" min="1"></span>
+                            <p class="mt-3 mb-4" id="quantidade">Quantidade disponivel:</p>
+                        </div>
+                        <hr class="my-4">
+                        <div class="d-flex align-items-center justify-content-between flex-column ">
+                            <button class="btn-2 btn-dark btn-black texto"
+                                onclick="addProdCar(), visualizarCarrinho()">COMPRAR AGORA</button>
+                            <button class="btn-2 btn-dark btn-black texto" onclick="addProdCar()">ADICIONAR AO
+                                CARRINHO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="d-flex align-items-center justify-content-between flex-column ">
+            <div id="faq">
+                <strong>Perguntas e respostas</strong>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

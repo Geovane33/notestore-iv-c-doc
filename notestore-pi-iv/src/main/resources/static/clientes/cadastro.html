@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+       <!--cadastro css-->
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="cadastro.js"></script>
+</head>
+
+<body>
+        <nav class="navbar sticky-top bg-black">
+            <a class="container" href="/index"><img class="m-auto" src="../logo/notestore.png" width="250"></a>
+        </nav>
+    <div>
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col-md-10">
+                    <h3 class="d-none d-md-block"><strong>Faça seu cadastro e tenha acesso aos melhores notebooks do mercado!</strong><br></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <form id="cadastro" class="d-md-block" action="/clientes" method="POST"><span class="m-auto">Dados com * são obrigatórios<br></span>
+                <input type="hidden" name="id" value="0">
+                <div><strong>Dados Pessoais</strong>
+                    <div class="form-row">
+                        <div class="col-md-4"><label class="m-auto" for="nome">*Nome<br></label><input class="form-control" type="text" id="nome" placeholder="Digite seu nome" required="" minlength="3" maxlength="15" name="nome"></div>
+                        <div class="col-md-4"><label class="m-auto" for="sobrenome">*Sobrenome<br></label><input class="form-control" type="text" id="sobrenome" placeholder="Digite seu sobrenome" required="" minlength="3" maxlength="20" name="sobrenome"></div>
+                        <div class="col-md-4"><label class="m-auto" for="cpf">*CPF<br></label><input class="form-control" type="text" id="cpf" onchange="validarCPF()" placeholder="Digite seu CPF" required="" minlength="14" maxlength="14" name="cpf"></div>
+                    </div>
+                    <div class="form-row">
+
+                        <div class="col-md-4"><label class="m-auto" for="dataNascimento">*Data de Nascimento<br></label><input class="form-control" id="dataNascimento" type="date" min="1900-01-01" max="2006-01-01" required="" name="dataNascimento"></div>
+                        <div class="col-md-4"><label class="m-auto" for="senha">*Senha<br></label><input class="form-control" type="password" id="senha" name="senha" required="" minlength="6" placeholder="Crie uma senha para o seu acesso"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4"><label class="m-auto" for="sexo">*Sexo<br></label><select class="form-control" id="sexo" name="sexo"><option value="0" selected="">Selecione</option><optgroup label="Informe seu sexo"><option value="1">Masculino</option><option value="2">Feminino</option></optgroup></select></div>
+                    </div>
+                </div>
+                <div><strong>Contato</strong>
+                    <div class="form-row">
+                        <div class="col-md-4"><label class="m-auto" for="email">*Email<br></label><input class="form-control" type="email" id="email" placeholder="Digite seu email" required name="email" minlength="6" maxlength="35"></div>
+                        <div class="col-md-4"><label class="m-auto" for="telefone">*Telefone<br></label><input class="form-control" type="text" id="telefone" required placeholder="Digite seu telefone" name="telefone" minlength="13" maxlength="14"></div>
+                    </div>
+                </div>
+                <div><strong>Endereço de fatura</strong>
+                    <div class="form-row">
+                        <div class="col-md-4"><label class="m-auto" for="cep">*CEP<br></label><input class="form-control" type="text" onchange="validarCep()" id="cep" placeholder="00000-000" name="cep" required="" minlength="9" maxlength="9"></div>
+                        <div class="col-md-4"><label class="m-auto" for="rua">*Rua/AV.<br></label><input class="form-control" type="text" id="rua" placeholder="Nome da rua ou avenida" required="" minlength="3" maxlength="35" name="rua"></div>
+                        <div class="col"><label class="m-auto" for="numero">*Numero<br></label><input class="form-control" type="number" id="numero" name="numero" required ></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4"><label class="m-auto" for="bairro">*Bairro<br></label><input class="form-control" type="text" id="bairro" placeholder="Digite seu bairro" name="bairro" required minlength="3" maxlength="15"></div>
+                        <div class="col-md-4"><label class="m-auto" for="estado">*Estado<br></label><input class="form-control" type="text" id="estado" placeholder="Estado" name="estado" required minlength="2" maxlength="20"></div>
+                        <div class="col"><label class="m-auto" for="cidade">*Cidade<br></label><input class="form-control" type="text" id="cidade" placeholder="Cidade" name="cidade" required minlength="3" maxlength="20"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4"><label class="m-auto" for="complemento">Complemento<br></label><input class="form-control" type="text" id="complemento" placeholder="Complemente seu endereço" name="complemento" maxlength="30"></div>
+                    </div>
+                    <div class="form-row justify-content-center">
+                        <div class="col-md-4"><button class="btn btn-block border rounded border-dark shadow btn-black" type="submit"><strong>PROSSEGUIR</strong></button></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

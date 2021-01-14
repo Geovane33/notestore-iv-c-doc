@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+     <!-- dados do cliente js-css -->
+     <link rel="stylesheet" href="../css/style.css">
+     <script type="text/javascript" src="dados.js"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: rgb(0,0,0);">
+        <div class="container"><a href="/index"> <img src="../logo/notestore.png" style="width: 242px;"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#"><i class="fa fa-heart"></i>&nbsp;Favoritos<br></a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false" href="#" id="aNome">Entrar</a>
+                        <div class="dropdown-menu"><a class="dropdown-item a-black" href="#" >Meus pedidos</a><a class="dropdown-item a-black" href="#">Endereços</a><a class="dropdown-item a-black" href="#" onclick="logout()">Logout</a></div>
+                    </li>
+                </ul>
+            </div><i class="fa fa-shopping-cart" style="font-size: 33px;color: rgb(255,255,255);"></i></div>
+    </nav>
+    <div style="margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-truck"></i><a class="a-black" href="/clientes/pedidos"><span>Pedidos</span></a></li>
+                        <li class="list-group-item"><i class="material-icons">card_giftcard</i><span>Vales</span></li>
+                        <li class="list-group-item"><i class="fa fa-user"></i><a class="a-black" href="/clientes/dados"><span>Seus dados</span></a></li>
+                        <li class="list-group-item"><i class="fa fa-home"></i><a class="a-black" href="/clientes/enderecos-visualizar"><span>Endereços</span></a></li>
+                        <li class="list-group-item"><i class="fa fa-credit-card-alt"></i><span>Cartões salvos</span></li>
+                        <li class="list-group-item"> <i class="material-icons">exit_to_app</i><a class="a-black" href="/logout"><span>Sair</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-xl-4">
+                    <h3>Seus dados</h3>
+                    <form id="formAlterarDados" action="/clientes/alterar-dados" method="POST">
+                        <div class="row">
+                            <div class="col-xl-11 offset-xl-0" style="border: 1px solid rgba(33,37,41,0.24);border-radius: 6px;">
+                                <div class="row">
+                                    <div class="col"><label class="d-xl-flex m-auto justify-content-xl-start">Nome</label><input
+                                            class="form-control-lg d-inline-flex container" type="text" id="nome" name="nome"></div>
+                                </div><label class="d-xl-flex m-auto justify-content-xl-start">Sobrenome</label><input
+                                    class="form-control-lg d-xl-flex container" type="text" id="sobrenome" name="sobrenome"><label
+                                    class="d-xl-flex m-auto justify-content-xl-start">Data de nascimento</label>
+                                <input class="form-control-lg" type="date" id="dataNascimento" name="dataNascimento"
+                                    style="width: 317px;"><label class="d-xl-flex m-auto justify-content-xl-start">CPF</label><input
+                                    class="form-control-lg d-xl-flex container" type="text" disabled="" id="cpf"
+                                    placeholder="000.000.000-00"><label class="d-flex m-auto">Sexo</label>
+                                <div><input type="radio" name="sexo" id="sexoMasc" value="Masculino"><label
+                                        for="Masculino">Masculino</label><input type="radio" name="sexo" id="sexoFemi" value="Feminino"
+                                        style="margin-left: 23px;"><label class="justify-content-xl-start" for="Feminino">Feminino</label>
+                                </div>
+                                <label class="d-flex m-auto">Telefone</label><input class="form-control-lg d-xl-flex container"
+                                    id="telefone" type="text" placeholder="(00) 0-0000-0000" name="telefone"><button
+                                    class="btn btn-block border rounded shadow btn-black" type="submit">Salvar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col" style="padding-left: 34px;">
+                    <div style="background: #000000;height: 492px;width: 1px;"></div>
+                </div>
+                <div class="col-sm-4 offset-0">
+                    <h3>Dados de acesso</h3>
+                    <form id="formAlterarSenha" action="/clientes/senha" method="POST">
+                    <div class="row">
+                        <div class="col" style="border: 1px solid rgba(33,37,41,0.24);border-radius: 6px;"><label
+                                class="d-xl-flex m-auto justify-content-xl-start">Email</label><input
+                                class="form-control-lg d-xl-flex container" type="text" id="email" disabled=""><label
+                                class="d-xl-flex m-auto justify-content-xl-start"  >Senha</label><input
+                                class="form-control-lg d-xl-flex container" type="password" placeholder="nova senha" name="senha"><button
+                                class="btn btn-block border rounded shadow btn-black" type="submit">Salvar<br></button></div>
+                    </div>
+                </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

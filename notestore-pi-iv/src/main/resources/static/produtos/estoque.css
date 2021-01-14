@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+.page-titulo {
+    font-size: 151%;
+    margin-top: 1%;
+    right: auto;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.barra-acoes {
+    font-size: 151%;
+    margin-top: 1%;
+    right: auto;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.texto {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.thead-black {
+    color: #fff;
+    background-color: black;
+    border-color: #454d55;
+}
+
+.centered {
+    padding: 0px !important;
+    text-align: center;
+    top: 13px;
+    position: relative;
+    width: 60% !important;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+input {
+    font-family: sans-serif !important;
+    width: 10%;
+    height: 24px;
+    font-size: 14px !important;
+}
+
+.label-quantidade-estoque {
+    font-size: 15px;
+}
+
+.quantidade-estoque {
+    width: 4%;
+}
+
+.btn-black-m {
+    top: 0px !important;
+    font-size: 44% !important;
+    width: 9%;
+    top: 10px;
+    position: relative;
+    background-color: black !important;
+}
+
+.btn-black-m:hover {
+    color: black !important;
+    background-color: white !important;
+}
+.btn-pag{
+    font-size: 12px !important;
+    margin-bottom: 21px;
+}
+.icons-acoes{
+    width: 20px;
+    cursor: pointer;
+}

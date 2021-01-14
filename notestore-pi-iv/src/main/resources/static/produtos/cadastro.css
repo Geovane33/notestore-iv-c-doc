@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.form-cadastro {
+    height: 100vh;
+}
+
+.area-form {
+    height: 95vh;
+}
+
+.titulo-pagina {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 151%;
+    margin-top: 1%;
+    right: auto;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.area-texto-produto {
+    position: relative;
+    right: 18%;
+    width: 136% !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 92px;
+}
+
+.area-texto {
+    text-align: center;
+}
+
+.btn-black-m {
+    top: 10px;
+    position: relative;
+    background-color: black !important;
+}
+
+.btn-black-m:hover {
+    color: black !important;
+    background-color: white !important;
+}
+
+label {
+    margin-bottom: 0 !important;
+}
+
+#removerInput{
+    display: none;
+}
+@media (min-width: 600px){
+    .input-imagem{
+        border: 1px solid #ced4da00 !important;
+        font-size: 8px !important;
+    }}
+@media (min-width: 1200px){
+    .input-imagem{
+        border: 1px solid #ced4da00 !important;
+        font-size: 12px !important;
+    }}

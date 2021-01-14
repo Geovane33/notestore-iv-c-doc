@@ -1,0 +1,15 @@
+.container-info {
+  margin-top: 50px;
+}
+
+.img-preview{
+  width: 100px;
+}
+
+.resumo-compras{
+  background: rgba(239,238,238,0.77);
+
+}
+.texto-underline{
+text-decoration: underline;
+}

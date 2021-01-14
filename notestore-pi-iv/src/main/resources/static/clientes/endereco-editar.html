@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+    <!--jquery js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
+        integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww=="
+        crossorigin="anonymous"></script>
+
+    <!--bootstrap css-js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!--alerta personalizado js-css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- dados do cliente js-css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="endereco-editar.js"></script>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: rgb(0,0,0);">
+        <div class="container"><a href="/index"> <img src="../logo/notestore.png" style="width: 242px;"></a><button
+                data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#"><i
+                                class="fa fa-heart"></i>&nbsp;Favoritos<br></a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-white" data-toggle="dropdown"
+                            aria-expanded="false" href="#" id="aNome" >Entrar</a>
+                        <div class="dropdown-menu"><a class="dropdown-item a-black" href="#">Meus pedidos</a><a
+                                class="dropdown-item a-black" href="#">Endereços</a><a class="dropdown-item a-black"
+                                href="#" onclick="logout()">Logout</a></div>
+                    </li>
+                </ul>
+            </div><i class="fa fa-shopping-cart" style="font-size: 33px;color: rgb(255,255,255);"></i>
+        </div>
+    </nav>
+    <div style="margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-truck"></i><a class="a-black" href="/clientes/pedidos"><span>Pedidos</span></a></li>
+                        <li class="list-group-item"><i class="material-icons">card_giftcard</i><span>Vales</span></li>
+                        <li class="list-group-item"><i class="fa fa-user"></i><a class="a-black" href="/clientes/dados"><span>Seus dados</span></a></li>
+                        <li class="list-group-item"><i class="fa fa-home"></i><a class="a-black" href="/clientes/enderecos-visualizar"><span>Endereços</span></a></li>
+                        <li class="list-group-item"><i class="fa fa-credit-card-alt"></i><span>Cartões salvos</span></li>
+                        <li class="list-group-item"> <i class="material-icons">exit_to_app</i><a class="a-black" href="/logout"><span>Sair</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <h5 style="color: rgb(0,0,0);">Adicionar ou editar endereço</h5>
+                    <form action="/clientes/enderecos" id="endereco" method="post">
+                        <input type="hidden" value="0" name="id" id="id">
+                        <div class="row">
+
+                            <div class="col"><label class="d-xl-flex m-auto justify-content-xl-start">Nome do
+                                    endereço</label><input class="border rounded form-control-lg" type="text"
+                                    name="nome" id="nome" required placeholder="apelido/nome" style="height: 30px;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><label class="d-xl-flex m-auto justify-content-xl-start">CEP</label><input
+                                class="border rounded form-control-lg" placeholder="00000-000" type="text" required name="cep" id="cep"
+                                onchange="validarCep()" maxlength="9" minlength="9" style="height: 30px;"></div>
+                            <div class="col"><label class="d-xl-flex m-auto justify-content-xl-start">Rua</label><input
+                                    class="border rounded form-control-lg" type="text" required name="rua" id="rua"
+                                    style="height: 30px;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><label
+                                    class="d-xl-flex m-auto justify-content-xl-start">Bairro</label><input
+                                    class="border rounded form-control-lg" type="text" required name="bairro"
+                                    id="bairro" style="height: 30px;"></div>
+                            <div class="col"><label
+                                    class="d-xl-flex m-auto justify-content-xl-start">Cidade</label><input
+                                    class="border rounded form-control-lg" type="text" required name="cidade"
+                                    id="cidade" style="height: 30px;"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><label
+                                    class="d-xl-flex m-auto justify-content-xl-start">Estado</label><input
+                                    class="border rounded form-control-lg" type="text" required name="estado"
+                                    id="estado" style="height: 30px;"></div>
+                                    <div class="col"><label
+                                        class="d-xl-flex m-auto justify-content-xl-start">Numero</label><input
+                                        class="border rounded form-control-lg" type="text" required name="numero"
+                                        id="numero" style="height: 30px;"></div>
+  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-1 offset-5 d-xl-flex justify-content-xl-center"><button
+                                    class="btn btn-black" type="submit">Salvar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

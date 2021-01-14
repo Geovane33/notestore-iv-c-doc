@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>NOTESTORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body style="opacity: 1;">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: rgb(0,0,0);">
+        <div class="container"><a href="/index"><img src="../logo/notestore.png" style="width: 242px;"></a><button data-toggle="collapse"
+                class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1"><i class="fa fa-search"></i><input type="search"
+                    id="search-field" class="search-field" name="search">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#"><i
+                                class="fa fa-heart"></i>&nbsp;Favoritos<br></a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-white" data-toggle="dropdown"
+                            aria-expanded="false" href="#">Entrar</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="/login">Login</a><a
+                                class="dropdown-item" href="#">Meus pedidos</a><a class="dropdown-item"
+                                href="#">Endereços</a></div>
+                    </li>
+                </ul>
+            </div><i class="fa fa-shopping-cart" style="font-size: 33px;color: rgb(255,255,255);"></i>
+        </div>
+    </nav>
+    <div style="margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><i class="fas fa-truck"></i><a class="a-black" href="/clientes/pedidos"><span>Pedidos</span></a></li>
+                        <li class="list-group-item"><i class="material-icons">card_giftcard</i><span>Vales</span></li>
+                        <li class="list-group-item"><i class="fa fa-user"></i><a class="a-black" href="/clientes/dados"><span>Seus dados</span></a></li>
+                        <li class="list-group-item"><i class="fa fa-home"></i><a class="a-black" href="/clientes/enderecos-visualizar"><span>Endereços</span></a></li>
+                        <li class="list-group-item"><i class="fa fa-credit-card-alt"></i><span>Cartões salvos</span></li>
+                        <li class="list-group-item"> <i class="material-icons">exit_to_app</i><a class="a-black" href="/logout"><span>Sair</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <h5 style="color: rgb(0,0,0);">Pedidos</h5>
+                    <div class="row" style="border-radius: 4px;box-shadow: 0px 2px 0px;">
+                        <div class="col">
+                            <div class="row" style="padding-bottom: 50px;">
+                                <div class="col">
+                                    <strong class="d-xl-flex justify-content-xl-start">Status do pedido: Aguardando Pagamento</strong>
+                                    <div style="box-shadow: 0px 0px 6px;">
+                                        <div class="col"><img class="d-flex" style="width: 152px;height: 112px;"
+                                                src="assets/img/dell-2.png"><strong>Notebook LG</strong><span
+                                                class="d-xl-flex align-items-xl-start">Marca:
+                                                <strong>&nbsp;LG</strong></span><span
+                                                class="d-xl-flex align-items-xl-start">Quantidade:
+                                                <strong>&nbsp;1</strong></span>
+                                            <span class="d-xl-flex align-items-xl-start">Unidade: <strong>&nbsp;R$
+                                                    3.999</strong></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div style="box-shadow: 0px 0px 6px;">
+                                        <div class="col"><img class="d-flex" style="width: 152px;height: 112px;"
+                                                src="assets/img/dell-2.png"><strong>Notebook LG</strong><span
+                                                class="d-xl-flex align-items-xl-start">Marca:
+                                                <strong>&nbsp;LG</strong></span><span
+                                                class="d-xl-flex align-items-xl-start">Quantidade:
+                                                <strong>&nbsp;1</strong></span>
+                                            <span class="d-xl-flex align-items-xl-start">Unidade: <strong>&nbsp;R$
+                                                    3.999</strong></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div style="box-shadow: 0px 0px 6px;">
+                                        <div class="col"><img class="d-flex" style="width: 152px;height: 112px;"
+                                                src="assets/img/dell-2.png"><strong>Notebook LG</strong><span
+                                                class="d-xl-flex align-items-xl-start">Marca:
+                                                <strong>&nbsp;LG</strong></span><span
+                                                class="d-xl-flex align-items-xl-start">Quantidade:
+                                                <strong>&nbsp;1</strong></span>
+                                            <span class="d-xl-flex align-items-xl-start">Unidade: <strong>&nbsp;R$
+                                                    3.999</strong></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="col" style="background: rgba(222,222,222,0.58);border-radius: 5px;"><strong
+                                        class="d-xl-flex justify-content-xl-start">Resumo da
+                                        compra</strong><span>Pedido:&nbsp;</span><span
+                                        class="d-xl-flex align-items-xl-start">Data do pedido: <strong>&nbsp;13/11/2020
+                                            18:00</strong></span><span class="d-xl-flex align-items-xl-start">Valor
+                                        total: <strong>&nbsp;1</strong></span>
+                                    <hr><span class="d-xl-flex align-items-xl-start"><strong>Endereço de
+                                            entrega</strong></span><span
+                                        class="d-xl-flex align-items-xl-start">Casa</span><span
+                                        class="d-xl-flex align-items-xl-start">Rua José Galdino, 309 - Antiga Rua dos
+                                        Trabalhadores<br></span>
+                                    <span class="d-xl-flex align-items-xl-start">CEP: 06950-000<br></span>
+                                    <hr><span class="d-xl-flex align-items-xl-start"><strong>Forma de
+                                            pagamento</strong></span><span class="d-xl-flex align-items-xl-start">Cartão
+                                        de crédito: 3.999,00<br>(Parcelado em 3x de R$50,00)<br></span>
+                                    <hr><span class="d-xl-flex align-items-xl-start"><strong>Total da
+                                            compra</strong></span><span class="d-xl-flex align-items-xl-start">Subtotal
+                                        de produtos: 3.999,00<br></span><span
+                                        class="d-xl-flex align-items-xl-start">Frete: R$ 16,00<br></span>
+                                    <span class="d-xl-flex align-items-xl-start">Descontos: R$ 0,00<br></span>
+                                    <hr><span class="d-xl-flex align-items-xl-start"><strong>Valor total: R$
+                                            3.999,00</strong></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
